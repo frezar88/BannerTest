@@ -1,0 +1,532 @@
+@import "_nullstyle.scss";
+
+@font-face {
+    font-family: SFProText;
+    src: url(../fonts/FontsFree-Net-SFProText-Regular.ttf);
+}
+@font-face {
+    font-family: SFProDisplay;
+    src: url(../fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
+
+body {
+    font-family: SFProDisplay;
+    color: #fff;
+    text-align: center;
+    background-color: #212634;
+}
+
+.probanner {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: url("/Assets/img/4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    &__wrapper {
+        padding: 0 24px;
+    }
+}
+.probanner-header {
+    padding-top: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__btn-cross {
+        a {
+        }
+    }
+
+    &__btn-restore {
+        a {
+            font-family: SFProText;
+            font-size: 13px;
+            line-height: 41px;
+            letter-spacing: -0.216667px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+.probanner-main {
+    margin-top: 135px;
+
+    &__title {
+        h1 {
+            font-weight: bold;
+            font-family: SFProDisplay;
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__features {
+        margin-top: 29px;
+        display: flex;
+        justify-content: center;
+        ul {
+            li {
+                padding-left: 30px;
+                text-align: start;
+                font-family: SFProText;
+                font-size: 17px;
+                line-height: 30px;
+                letter-spacing: -0.321111px;
+                text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.684495);
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: url("");
+                    left: -5px;
+                    width: 22px;
+                }
+                &:nth-child(1) {
+                    &::before {
+                        content: url("/Assets/unlimitedDocs.svg");
+                        top: 1px;
+                    }
+                }
+                &:nth-child(2) {
+                    &::before {
+                        content: url("/Assets/export.svg");
+                        top: 3px;
+                        width: 17px;
+                    }
+                }
+                &:nth-child(3) {
+                    &::before {
+                        content: url("/Assets/noAds.svg");
+                        width: 20px;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+.probanner-selection-block {
+    margin-top: 20px;
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    &__item {
+        box-sizing: border-box;
+        opacity: 0.6;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 15px 0;
+        flex-basis: 50%;
+        z-index: 110;
+        max-width: 151px;
+        width: 100%;
+        background-image: url("/Assets/shape-1.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        &:last-child {
+            background-image: url("/Assets/shape-2.svg");
+        }
+    }
+    &__item.active {
+        transition: 0.3s;
+        transform: scale(1.1, 1.1);
+        opacity: 1;
+    }
+
+    &__type {
+        font-size: 18.7px;
+        line-height: 22px;
+        text-align: center;
+        margin: 24px 0px 11px;
+    }
+
+    &__price {
+        font-size: 24px;
+        line-height: 15px;
+        padding-bottom: 46px;
+        text-align: center;
+        span {
+            font-size: 14px;
+        }
+    }
+
+    &__label {
+        display: grid;
+        align-items: center;
+        font-family: SFProDisplay;
+        font-size: 15.4px;
+        line-height: 18px;
+        text-align: center;
+        position: absolute;
+        top: 60%;
+        background: #495795;
+        width: 100%;
+        height: 22px;
+    }
+
+    &__price-per-month {
+        font-size: 13.2px;
+        line-height: 15px;
+        text-align: center;
+        color: #ffffff;
+        padding-bottom: 13px;
+    }
+
+    &__discount {
+        position: absolute;
+        top: 6px;
+        right: 0px;
+        font-family: SFProDisplay;
+        font-size: 12px;
+        line-height: 14px;
+        color: #ffffff;
+        background: #db0000;
+        border-radius: 19.2px;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__btn {
+        button {
+            max-width: 280px;
+            width: 100%;
+            margin: 20px auto 15px;
+            background: linear-gradient(270deg, #1987ff 0%, #19ccff 100%);
+            border-radius: 30px;
+            font-family: SFProDisplay;
+            font-size: 17px;
+            line-height: 17px;
+            padding: 15px 0;
+            color: #fff;
+        }
+    }
+
+    &__auto-rewable {
+        font-family: Roboto;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        color: #ffffff;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+}
+.probanner-footer {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn-item {
+        a {
+            font-family: Roboto;
+            font-size: 11px;
+            line-height: 13px;
+            text-decoration-line: underline;
+            color: #bdc0d0;
+        }
+    }
+
+    &__line-block {
+        margin-top: 25px;
+        div {
+            max-width: 134px;
+            width: 100%;
+            margin: 0 auto;
+            height: 5px;
+            background: #ffffff;
+            border-radius: 100px;
+        }
+    }
+}
+
+@media (max-height: 568px) {
+    .probanner {
+        background-position: 0px -45px;
+    }
+    .probanner-header {
+        padding-top: 10px;
+    }
+    .probanner-main {
+        margin-top: 40px;
+    }
+    .probanner-main__title h1 {
+        line-height: 35px;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    .probanner-main__features ul li {
+        line-height: 25px;
+    }
+    .probanner-main__features {
+        margin-top: 5px;
+    }
+    .probanner-selection-block {
+        margin-top: 10px;
+    }
+    .probanner-selection-block__list {
+        display: flex;
+    }
+
+    .probanner-selection-block__item {
+        flex-basis: 50%;
+        transition: 0.3s;
+        transform: scale(0.9, 0.9);
+
+        background-size: contain;
+    }
+    .probanner-selection-block__item.active {
+        transition: 0.3s;
+        transform: scale(1, 1);
+    }
+    .probanner-selection-block__discount {
+        top: -1px;
+        right: 4px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .probanner-selection-block__type {
+        margin: 0px 0px 5px;
+        font-size: 14px;
+    }
+    .probanner-selection-block__price-per-month {
+        padding-bottom: 0px;
+    }
+    .probanner-selection-block__price {
+        font-size: 18px;
+        padding-bottom: 50px;
+    }
+    .probanner-selection-block__label {
+        top: 52%;
+        width: 95%;
+        left: 3px;
+    }
+
+    .probanner-selection-block__btn button {
+        margin: 15px auto 10px;
+        padding: 8px 0;
+        color: #fff;
+    }
+    .probanner-footer {
+        padding-top: 10px;
+    }
+
+    .probanner-selection-block__auto-rewable {
+        font-size: 10px;
+    }
+    .probanner-footer__line-block {
+        margin-top: 20px;
+        div {
+            height: 3px;
+        }
+    }
+}
+@media (min-height: 667px) {
+    .probanner {
+        background-position: 0px -45px;
+    }
+    .probanner-header {
+        padding-top: 10px;
+    }
+    .probanner-main {
+        margin-top: 120px;
+    }
+    .probanner-main__title h1 {
+        line-height: 35px;
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+    .probanner-main__features ul li {
+        line-height: 30px;
+    }
+    .probanner-main__features {
+        margin-top: 15px;
+    }
+    .probanner-selection-block {
+        margin-top: 20px;
+    }
+    .probanner-selection-block__list {
+        display: flex;
+    }
+
+    .probanner-selection-block__item {
+        margin: 0 2px;
+        flex-basis: 50%;
+        transition: 0.3s;
+        transform: scale(1.1, 1.1);
+
+        background-size: contain;
+    }
+    .probanner-selection-block__item.active {
+        transition: 0.3s;
+        transform: scale(1.2, 1.2);
+    }
+    .probanner-selection-block__discount {
+        top: -1px;
+        right: 11px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .probanner-selection-block__type {
+        margin: 0px 0px 5px;
+        font-size: 14px;
+    }
+    .probanner-selection-block__price-per-month {
+        padding-bottom: 0px;
+    }
+    .probanner-selection-block__price {
+        font-size: 18px;
+        padding-bottom: 50px;
+    }
+    .probanner-selection-block__label {
+        top: 52%;
+        width: 85%;
+        left: 12px;
+        height: 30px;
+    }
+
+    .probanner-selection-block__btn button {
+        margin: 15px auto 10px;
+        padding: 8px 0;
+        color: #fff;
+    }
+    .probanner-selection-block__btn  {
+        margin-top: 20px;
+       
+    }
+    .probanner-footer {
+        padding-top: 10px;
+    }
+
+    .probanner-selection-block__auto-rewable {
+        font-size: 10px;
+    }
+    .probanner-footer__line-block {
+        margin-top: 20px;
+        div {
+            height: 3px;
+        }
+    }
+}
+@media (min-height: 736px) {
+    .probanner {
+        background-position: 0px -45px;
+    }
+    .probanner-header {
+        padding-top: 30px;
+    }
+    .probanner-main {
+        margin-top: 120px;
+    }
+    .probanner-main__title h1 {
+        line-height: 35px;
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+    .probanner-main__features ul li {
+        line-height: 30px;
+    }
+    .probanner-main__features {
+        margin-top: 15px;
+    }
+    .probanner-selection-block {
+        margin-top: 40px;
+    }
+   
+    
+
+    
+
+    .probanner-selection-block__btn button {
+        margin: 25px auto 10px;
+        padding: 8px 0;
+        color: #fff;
+        padding: 15px;
+    }
+    .probanner-selection-block__btn  {
+        margin-top: 20px;
+       
+    }
+    .probanner-footer {
+        padding-top: 10px;
+    }
+
+    .probanner-selection-block__auto-rewable {
+        font-size: 10px;
+    }
+    .probanner-footer__line-block {
+        margin-top: 20px;
+        div {
+            height: 5px;
+        }
+    }
+}
+@media (min-height: 812px) {
+    .probanner {
+        background-position: center;
+    }
+    .probanner-header {
+        padding-top: 40px;
+    }
+    .probanner-main {
+        margin-top: 140px;
+    }
+    .probanner-main__title h1 {
+        line-height: 35px;
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+    .probanner-main__features ul li {
+        line-height: 35px;
+    }
+    .probanner-main__features {
+        margin-top: 25px;
+    }
+    .probanner-selection-block {
+        margin-top: 50px;
+    }
+   
+    .probanner-selection-block__btn button {
+        margin: 25px auto 10px;
+        padding: 8px 0;
+        color: #fff;
+        padding: 15px;
+    }
+    .probanner-selection-block__btn  {
+        margin-top: 20px;
+       
+    }
+    .probanner-footer {
+        padding-top: 10px;
+    }
+
+    .probanner-selection-block__auto-rewable {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .probanner-footer__line-block {
+        margin-top: 20px;
+        div {
+            height: 5px;
+        }
+    }
+}
