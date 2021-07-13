@@ -338,13 +338,15 @@ body {
 
 @media (max-height: 568px) {
   .probanner {
+
     background-position: 0px -45px;
+
   }
   .probanner-header {
     padding-top: 10px;
   }
   .probanner-main {
-    margin-top: 40px;
+    margin-top: 75px;
   }
   .probanner-main__title h1 {
     line-height: 35px;
@@ -416,7 +418,12 @@ body {
 
 @media (min-height: 667px) {
   .probanner {
-    background-position: 0px -45px;
+    
+    background: url("/Assets/img/4@2x.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
   }
   .probanner-header {
     padding-top: 10px;
@@ -499,7 +506,10 @@ body {
 
 @media (min-height: 736px) {
   .probanner {
-    background-position: 0px -45px;
+    background-repeat: no-repeat;
+    background: url("/Assets/img/4@3x.png");
+    background-position: center;
+    background-size: cover;
   }
   .probanner-header {
     padding-top: 30px;
@@ -547,6 +557,7 @@ body {
 @media (min-height: 812px) {
   .probanner {
     background-position: center;
+    
   }
   .probanner-header {
     padding-top: 40px;
